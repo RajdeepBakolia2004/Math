@@ -1,0 +1,151 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\begin{document}
+\title{Linear Space}
+\author{Rajdeep Bakolia}
+\date{\today}
+\maketitle
+
+\section{Introduction}
+In defining linear space we define the axims the elements of the space must satisfy.
+We do not define the elements or the operations on them.
+example: \( \mathbb{R}^n, \mathbb{R}, \mathbb{C} \), polynomials, etc.
+\section{Definition}
+let $V$ be a non-empty set of objects called elements. Then $V$ is
+called a linear space if the following axioms are satisfied:
+\begin{enumerate}
+    \item $V$ is closed under addition. For all $x,y \in V$, there exist an element $x+y \in V$ called the sum of x and y.
+    \item $V$ is closed under scalar multiplication. For all $x \in V$ and all scalars $c \in  \mathbb{R} $, there exists an element $cx \in V$ called the scalar product of c and x.
+    \item Addition is commutative. For all $x,y \in V$, $x+y = y+x$.
+    \item Addition is associative. For all $x,y,z \in V$, $(x+y)+z = x+(y+z)$.
+    \item $V$ there exists an element zero $\mathcal{O}$ such that for all $x \in V$, $x+\mathcal{O} = x$.
+    \item For each $x \in V$, there exists an element $-x$ such that $x+(-x) = \mathcal{O}$.
+    \item Scalar multiplication is associative. For all $x \in V$ and all scalars $a,b \in \mathbb{R}$, $(ab)x = a(bx)$.
+    \item Scalar multiplication distributes over vector addition. For all $x,y \in V$ and all scalars $a \in \mathbb{R}$, $a(x+y) = ax + ay$.
+    \item Scalar multiplication distributes over scalar addition. For all $x \in V$ and all scalars $a,b \in \mathbb{R}$, $(a+b)x = ax + bx$.
+    \item 1 is the identity of multiplication. For all $x \in V$, $1x = x$.
+\end{enumerate}
+
+The vector space or linear space which satify the above for all real number are called 
+real vector space or real linear space.
+The vector space or linear space which satify the above for all complex number are called
+complex vector space or complex linear space.
+
+\section{Theorem}
+\textbf{Theorem 1:} The zero vector is unique. \newline
+
+\textbf{Proof:} Let $\mathcal{O}_1$ and $\mathcal{O}_2$ be two zero vectors in $V$.
+
+Then $\mathcal{O}_1 + \mathcal{O}_2 = \mathcal{O}_1$ and
+
+$\mathcal{O}_1 + \mathcal{O}_2 = \mathcal{O}_2$.
+
+Thus $\mathcal{O}_1 = \mathcal{O}_2$. \newline
+
+
+\textbf{Theorem 2:} Uniqueness of additive inverse. \newline
+
+\textbf{Proof:} Let $x$ be an element of $V$ and let $y_1$ and $y_2$ be two additive inverses of $x$.
+
+Then $x + y_1 = \mathcal{O}$ and $x + y_2 = \mathcal{O}$.
+
+$y_1 = y_1 + \mathcal{O} = y_1 + (x + y_2) = (y_1 + x) + y_2 = \mathcal{O} + y_2 = y_2$.
+
+hence $y_1 = y_2$. \newline
+
+note that -x = $(-1)x$ is the additive inverse of x. follows from uniqueness of distributive law.
+
+
+\section{Properties of Linear Space}
+
+\textbf{Theorem 3:}
+Let $x, y \in V$ and $a, b \in \mathbb{R}$. Then:
+\begin{enumerate}
+    \item $0 \cdot x = \mathcal{O}$
+    \item $a \cdot \mathcal{O} = \mathcal{O}$
+    \item $(-a) \cdot x = -(a \cdot x) = a \cdot (-x)$
+    \item If $a \cdot x = \mathcal{O}$, then either $a = 0$ or $x = \mathcal{O}$
+    \item If $a \cdot x = a \cdot y$ and $a \neq 0$, then $x = y$
+    \item If $a \cdot x = b \cdot x$ and $x \neq \mathcal{O}$, then $a = b$
+    \item $-(x + y) = (-x) + (-y)$
+    \item $x + x = 2x$, $x + x + x = 3x$, in general, $nx = x + x + \dots + x$ ($n$ times)
+\end{enumerate}
+
+\section*{Proof}
+
+\subsection*{(1) $0 \cdot x = \mathcal{O}$}
+\[
+2(0 \cdot x) = (2 \cdot 0) \cdot x = 0 \cdot x
+\]
+Now, add $-1(0 \cdot x)$ to both sides, which is the inverse of $0 \cdot x$:
+\[
+0 \cdot x = \mathcal{O}
+\]
+
+\subsection*{(2) $a \cdot \mathcal{O} = \mathcal{O}$}
+\[
+a \cdot \mathcal{O} + a \cdot \mathcal{O} = a(\mathcal{O} + \mathcal{O}) = a \cdot \mathcal{O}
+\]
+Now, add $-1(a \cdot \mathcal{O})$ to both sides:
+\[
+0 \cdot x = \mathcal{O}
+\]
+
+\subsection*{(3) $(-a) \cdot x = -(a \cdot x) = a \cdot (-x)$}
+\[
+(-a) \cdot x + a \cdot x = (-a + a) \cdot x = 0 \cdot x = \mathcal{O}
+\]
+By uniqueness of inverses:
+\[
+(-a) \cdot x = (-1)(a \cdot x) = a(-x)
+\]
+
+\subsection*{(4) If $a \cdot x = \mathcal{O}$, then either $a = 0$ or $x = \mathcal{O}$}
+Assume $a \neq 0$. Multiply both sides by $\frac{1}{a}$:
+\[
+\frac{1}{a} \cdot (a \cdot x) = \frac{1}{a} \cdot \mathcal{O}
+\]
+\[
+(\frac{1}{a}a) \cdot x = \mathcal{O} \implies 1 \cdot x = \mathcal{O} \implies x = \mathcal{O}
+\]
+
+\subsection*{(5) If $a \cdot x = a \cdot y$ and $a \neq 0$, then $x = y$}
+\[
+a \cdot x - a \cdot y = \mathcal{O}
+\]
+\[
+a(x - y) = \mathcal{O}
+\]
+Since $a \neq 0$, by (4), $x - y = \mathcal{O} \implies x = y$.
+
+\subsection*{(6) If $a \cdot x = b \cdot x$ and $x \neq \mathcal{O}$, then $a = b$}
+\[
+a \cdot x - b \cdot x = \mathcal{O}
+\]
+\[
+(a - b) \cdot x = \mathcal{O}
+\]
+Since $x \neq \mathcal{O}$, $a - b = 0 \implies a = b$.
+
+\subsection*{(7) $-(x + y) = (-x) + (-y)$}
+\[
+(-1)(x + y) = (-1)x + (-1)y
+\]
+Add $(-x) + (-y)$ to $(x + y)$:
+\[
+(x + y) + (-x) + (-y) = (x + (-x)) + (y + (-y)) = \mathcal{O}
+\]
+
+\subsection*{(8) $nx = x + x + \dots + x$ ($n$ times)}
+Proof by Induction \\
+Base case For $n = 1$, $1x = x$. \newline
+Inductive step Assume true for $n = k$, i.e., $kx = x + x + \dots + x$ ($k$ times). \\
+For $n = k + 1$:
+\[
+(k + 1)x = kx + x = (x + x + \dots + x) + x \quad (k + 1 \text{ times})
+\]
+Thus, the statement holds for all $n \in \mathbb{N}$.
+
+\end{document}
