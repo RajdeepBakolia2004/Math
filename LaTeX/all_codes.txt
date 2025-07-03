@@ -1,0 +1,40 @@
+to download latex compiler-
+
+$sudo apt install texlive-full
+
+to install package and base latex only-
+
+$sudo apt install texlive-base
+$sudo apt install texlive-<package-name> (no need if full download)
+
+to compile you latex document -
+
+$pdflatex filename.tex
+You can also use xetex or lualatex if you're using Unicode or special fonts.
+
+
+LaTeX workshop-
+
+NOTE= """
+latexmk is a Perl script that automates LaTeX compilation—it runs the necessary number of passes of pdflatex, bibtex, etc., to resolve references, citations, etc.
+
+LaTeX Workshop uses latexmk by default as the build tool unless configured otherwise. 
+Think of it like a smart wrapper that calls the actual compilers like pdflatex, xelatex, or lualatex for you.
+"""
+$sudo apt install latexmk
+to delete auxillary file manually from terminal
+$latexmk -c
+
+
+"""
+chktex, a LaTeX linter (spellcheck, syntax checker), install this too
+"""
+$sudo apt install chktex
+
+
+
+
+ctrl+alt+B in vs code to compile latex file now we have installed LaTeX workshop there
+ctrl+shift+p then search clear auxillary file in vs code to delete the file which are not useful for you there
+or use ctrl+alt+c
+ctrl+alt+v to view compiled document side to side

@@ -1,0 +1,128 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{graphicx}
+\usepackage{float}
+\title{lecture 2}
+\author{Rajdeep Bakolia}
+\date{\today}
+
+\newtheorem{theorem}{Theorem}[section]
+% you can add optional [] to give whfere numbering should happen
+\newtheorem{corollary}{Corollary}[theorem]
+
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+
+\newcommand{\bv}[6]{\begin{pmatrix}
+    #1 & #2 & #3\\
+    #4 & #5 & #6\\
+\end{pmatrix}}
+
+\begin{document}
+\maketitle
+
+\section*{definition of $e$}
+
+\begin{enumerate}
+\item As a \textbf{Limit}:
+\begin{equation} \label{limit}
+\begin{split}
+e &= \lim_{n \to \infty} \left ( 1 + \frac{1}{n}\right )^n\\
+&= \lim_{t \to 0} \left ( 1 + t \right )^{\frac{1}{t}}\\
+\end{split}
+\end{equation}
+\item As a \textit{Sum}:
+\begin{align}
+    \label{sum1}
+    e =  \sum_{n = 0}^{\infty} \frac{1}{n!}\\
+    \label{sum2}
+    e = \sum_{t = 1}^{\infty} \frac{1}{(t-1)!}
+\end{align}
+
+\item As a \underline{continued fraction}
+\[e = 2 + \frac{1}{1 + \frac{1}{2 + \frac{2}{3 + \frac{3}{4 + \frac{4}{5 + \ddots}}}}}\]
+\end{enumerate}
+Equation \ref{limit} was really cool.\\
+Equation \ref{sum1} is same as \ref{sum2}\\
+\begin{multline}
+    e^{x} = 1 + \frac{x}{1!} + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!}+ \frac{x^5}{5!} + \frac{x^6}{6!} +\frac{x^7}{7!} + \frac{x^8}{8!}\\ + \frac{x^9}{9!} + \frac{x^{10}}{10!} + \frac{x^{11}}{11!} + \frac{x^{12}}{12!} + \frac{x^{13}}{13!} + \frac{x^{14}}{14!} + \frac{x^{15}}{15!} + \frac{x^{16}}{16!} 
+\end{multline}
+
+
+\newpage
+
+
+\section*{More tricks}
+
+
+\begin{table}[H]
+\caption{A simple Table}
+\label{t1}
+\begin{center}
+\begin{tabular}{|c | l | r | c |}
+    \hline
+    1 & 2 & 8 & 9 \\
+    \hline
+    3 & 5000000000 & 90000000 & 0\\
+    \hline
+    
+\end{tabular}
+\end{center}
+\end{table}
+I like table \ref{t1}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = \textwidth]{w }
+    \caption{Image display}
+    \label{img1}
+\end{figure}
+figure \ref{img1} is a pokemon named pikachu.\\
+tabular and includegraphics are actual code for both \\
+table and images the table and figure is used to give caption and label to them\\
+It creates a float object and latex try to find best place to fit that\\
+to resolve this us the package float and add [H] as shown.
+
+
+\newpage
+\section{Theorem and Macros}
+
+\begin{theorem}
+    sum of first n natural number is $\frac{n(n+1)}{2}$
+\end{theorem}
+\begin{proof}
+    \begin*{itemize}
+        \item Note that,
+        \item $\sum_{i = 1}^{n}i \text{ and } \sum_{i = 1}^{n}(n-i+1)$
+        \item Both are equal adding these gives
+        \item $n(n+1)$
+        \item and then divide the equation by two to get the sum 
+    \end*{itemize}
+    
+    
+    
+    
+    
+\end{proof}
+
+\begin{corollary}
+    let $m, n \in \N, m < n$ then sum from m + 1 to n is $\frac{n(n+1) - m(m+1)}{2}$
+\end{corollary}
+
+\begin{theorem}
+    in standard notation  $\N \subset \Q \subset \R$
+\end{theorem}
+
+\begin{corollary}
+    $\N \cap \Q = \Q$ 
+\end{corollary}
+\begin{proof}
+    as $\N$ is a subset of $\Q$
+\end{proof}
+
+$\bv{34}{56}{34}{76}{54}{45}$
+\end{document}

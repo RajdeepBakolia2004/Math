@@ -1,0 +1,71 @@
+\documentclass[twoside]{report}
+%print reports on same page
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+%for margin use the following package
+\usepackage{geometry}
+\usepackage{float}
+%report are designed for a longer document then a article it adds 
+%a title page too
+
+%lipsum has large amount of text
+\usepackage{lipsum}
+
+%can set paper to be A4 using geometry package
+\newgeometry{
+    top = 0.75in,
+    bottom = 0.75in,
+    outer = 0.75in,
+    inner = 1.5in,
+}
+
+
+
+\author{Rajdeep Bakolia}
+\title{\Large{Youtube Thesis}\\
+\LARGE{University of Youtube}}
+\date{\today}
+
+% large Large and LARGE are three parameters you can use
+% they are in increasing order of size by default LARGE
+
+
+
+\begin{document}
+
+\maketitle
+
+
+
+
+
+\chapter*{Abstract}
+A thesis about using youtube. It is really cool.
+
+\chapter*{Dedication}
+For my subscribers....
+
+\chapter*{Acknowledgements}
+I want to thank...
+
+
+
+%it will only include the chapter and section if no * otherwise it will
+%exclude it you can remove * from Abstract chapter and it will number it as well
+\tableofcontents
+\listoffigures %similarly table
+
+
+
+%for body of the thesis we will use references to files 
+
+\include{ch-YouTubeButtons}
+\include{ch-Subscribers}
+\include{Conclusion}
+
+\appendix
+\include{Appendix }
+
+\bibliographystyle{plain}
+\bibliography{ref}
+\end{document}

@@ -1,0 +1,67 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\title{lecture 1}
+\author{Rajdeep Bakolia}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+Hello world use this format to add a new line just below\\
+Okay so i realised how this work using \ twice just adds a new line\\
+and when you write below it the margin is maintained\\
+but if you give a space then also newline is added but a new text is considered\\
+
+like this now this text is center aligned separately and if you don't give both neither space nor \ then concatenation of the two sentence in different line.\\
+so whenever you want to start a new line but maintain the \\
+margin use \ two times \\ otherwise to start a new paragraph just give a space like this also no matter how many space you give it will be counted as one new line
+\newline \newline \newline 
+
+Now we will write an inline formula $e^{i\pi} + 1 = 0$\\
+for a single line equation.
+$$\lim_{n \to \infty} \left (1 + \frac{1}{n} \right )^n = e = 
+\lim_{n \to \infty} \frac{n}{\sqrt[n]{n!}}$$
+For another summation formula
+$$e = \sum_{n = 0}^{\infty} \frac{1}{n!} $$
+
+
+\begin{enumerate}
+    \item $(a + b)^2 = a^2 + 2ab + b^2$
+    \item $(a - b)^2 = a^2 - 2ab + b^2$
+    \item $(a^2 - b^2) = (a - b)(a + b)$
+\end{enumerate}
+\begin{itemize}
+    \item $(a + b)^2 = a^2 + 2ab + b^2$
+    \item $(a - b)^2 = a^2 - 2ab + b^2$
+    \item $(a^2 - b^2) = (a - b)(a + b)$
+\end{itemize}
+
+
+\newpage
+You can use star with section, article and subsection to remove numbring\\
+
+\section*{more Formula}
+$$\int_{a}^{b} f(x)dx$$
+$$\vec{v} = <v_1, v_2, v_3>$$
+next one uses amsmath 
+$$\iiint_{a}^{b} f(x,y,z)dxdydz$$
+$$\vec{v} \cdot \vec{w} $$
+matrix also need amsmath
+$$\begin{bmatrix}
+    3 & 5 & 6\\
+    4 & n & s\\
+\end{bmatrix}$$
+
+%use this for comment 
+\newpage
+
+to add images use the following command\\ \\ \\ \\ \\ 
+\includegraphics[scale = 0.2]{w}
+
+
+
+\end{document}
